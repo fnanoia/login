@@ -4,7 +4,7 @@ import cookieParser from "cookie-parser";
 import accountRouter from "./routes/account.js";
 import authRouter from "./routes/auth.js";
 import authSessionRouter from "./routes/auth-session.js";
-//import authTokenRouter from "./routes/auth-token.js";
+import authTokenRouter from "./routes/auth-token.js";
 
 dotenv.config();
 
@@ -19,7 +19,7 @@ app.use("/account", accountRouter);
 app.use("/auth", authRouter);
 
 app.use("/auth-session", authSessionRouter);
-//app.use("/auth-token", authTokenRouter);
+app.use("/auth-token", authTokenRouter);
 
 //Ruta principal
 app.get("/", (req, res) => {
